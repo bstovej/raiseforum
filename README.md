@@ -1,2 +1,2 @@
-# raiseforum.github.io
+# raiseforum
 Regional Asia Information Security Exchange (RAISE) Forum
