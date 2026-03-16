@@ -1,36 +1,716 @@
-<html>
-<style type="text/css">
- body {
-    font-family: "Arial", sans-serif;
-    font-size: 1.2em;
-    }
-</style>
-<head>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>RAISE Forum</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
 
-<title>RAISE Forum</title>
-</head>
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
 
-<body>
-<img src="image001.jpg">
-<h2>Regional Asia Information Security Exchange (RAISE) Forum (<a href="https://twitter.com/raiseforum">@raiseforum.org</a>)</h2>
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
 
-<p>
-The <strong>RAISE Forum</strong> was established since 2004 as an overall focal point for the Asian standardization community on information security issues by:
-</p>
-<ul>
-    <li>providing a platform for sharing of knowledge, and exchange ideas and dialogues on information security strategy, policies, and practices, including but not limited to their development, implementation, changes, and any lessons learnt that could be beneficial to the members of the Forum;
-    <li>providing a platform for sharing of knowledge, exchange of ideas and dialogues on information security standards related issues, challenges, and directions, in particular, relating to the adoption, deployment, and implementation of ICT related standards in the region;
-    <li>ensuring that the security-related standardization activities in Asia adequately reflect the requirements of the market constituents at a strategic level;
-    <li>providing a mechanism that could be used to follow-up on Asia policy requirements on Information Security standards issues;
-    <li>providing effective co-ordination between organizations of relevant standardization work programs and their execution;
-    <li>ensuring Asia requirements for standards and standards work in this area are correctly interfaced with international standards activity, and standards activity in other regions, to avoid conflict or duplication of effort; and
-    <li>acting as a strategic communication interface between relevant standards authorities and agencies on international standardization related topics.
-</ul>
-<h3>Meeting Schedule & Location</h3>
-<p>The RAISE Forum has held its 24th meeting since its inception. The Forum now meets once a year, in a location agreed by members from previous meeting. Each meeting is organized by the member from the location who is hosting the event. Attendees, both speakers and participants are self-funded for the event.</p>
-Due to the global COVID-19 pandemic situation, the 20th, 21st, and 22nd RAISE Forum meetings were all held online in 2020, 2021, and 2022, respectively. The 23rd meeting was held in Beijing, hosted by Beijing Powertime. The 24th meeting was hosted by the Thailand National Cybersecurity Committee from 3rd to 4th December 2024 in Bangkok, Thailand. Participants and presenters at the 24th meeting were members from China, Japan, Korea, Malaysia, Singapore, Thailand, and ISC2.</p>
- <p>The 25th RAISE Forum meeting was held on 22-23 September 2025 in Seoul, hosted by the Korea Telecommunication Technology Association (TTA), with sponsorship from Huawei International, and Beijing Powertime.</p>
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
 
-</body>
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
 
-</html>
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="142f2868-48c9-804e-bee7-eb7a36ac9e1d" class="page sans"><header><img class="page-cover-image" src="images/RAISE_grid_image_20x300.jpg" style="object-position:center 98.37%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon notion-static-icon" src="https://www.notion.so/icons/globe_green.svg"/></div><h1 class="page-title" dir="auto">RAISE Forum</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="142f2868-48c9-8049-8acc-cb2d875e5b50" class=""><strong>Regional Asia Information Security Exchange Forum (raiseforum.org)</strong></p></div><div style="display:contents" dir="auto"><div id="142f2868-48c9-8023-b508-d18bd622812b" class="column-list"><div style="display:contents" dir="auto"><div id="7c5f96ac-2ab8-493d-8720-4ea07af5a00a" style="width:75%" class="column"><div style="display:contents" dir="auto"><h3 id="142f2868-48c9-8019-b88c-e28fd1558ace" class="">The <strong>RAISE Forum</strong> was established since 2004 as an overall focal point for the Asian standardization community on information security issues by:</h3></div><div style="display:contents" dir="auto"><ul id="142f2868-48c9-8065-8ff1-ee302919ac5d" class="bulleted-list"><li style="list-style-type:disc">providing a platform for sharing of knowledge, and exchange ideas and dialogues on information security strategy, policies, and practices, including but not limited to their development, implementation, changes, and any lessons learnt that could be beneficial to the members of the Forum;</li></ul></div><div style="display:contents" dir="auto"><ul id="142f2868-48c9-80dc-a5b0-fb1f3f83d38a" class="bulleted-list"><li style="list-style-type:disc">providing a platform for sharing of knowledge, exchange of ideas and dialogues on information security standards related issues, challenges, and directions, in particular, relating to the adoption, deployment, and implementation of ICT related standards in the region;</li></ul></div><div style="display:contents" dir="auto"><ul id="142f2868-48c9-80d6-bb02-e39a0ab9c894" class="bulleted-list"><li style="list-style-type:disc">ensuring that the security-related standardization activities in Asia adequately reflect the requirements of the market constituents at a strategic level;</li></ul></div><div style="display:contents" dir="auto"><ul id="142f2868-48c9-8020-83d7-f24df16bc0b5" class="bulleted-list"><li style="list-style-type:disc">providing a mechanism that could be used to follow-up on Asia policy requirements on Information Security standards issues;</li></ul></div><div style="display:contents" dir="auto"><ul id="142f2868-48c9-80eb-a500-e8752be74518" class="bulleted-list"><li style="list-style-type:disc">providing effective co-ordination between organizations of relevant standardization work programs and their execution;</li></ul></div><div style="display:contents" dir="auto"><ul id="142f2868-48c9-8078-b026-eb3650f93456" class="bulleted-list"><li style="list-style-type:disc">ensuring Asia requirements for standards and standards work in this area are correctly interfaced with international standards activity, and standards activity in other regions, to avoid conflict or duplication of effort; and</li></ul></div><div style="display:contents" dir="auto"><ul id="142f2868-48c9-8061-817d-eb089c515d69" class="bulleted-list"><li style="list-style-type:disc">acting as a strategic communication interface between relevant standards authorities and agencies on international standardization related topics.</li></ul></div><div style="display:contents" dir="auto"><hr id="142f2868-48c9-8088-9e45-f015407b55fc"/></div><div style="display:contents" dir="auto"><h3 id="142f2868-48c9-8071-836e-d2ddd14b0ee1" class="">Meetings &amp; Location</h3></div><div style="display:contents" dir="auto"><p id="142f2868-48c9-804d-8073-e809ab89938c" class="">The RAISE Forum has held its 23rd meeting since its inception. The Forum now meets once a year, in a location agreed by members from previous meeting. Each meeting is organized by the member from the location who is hosting the event. </p></div><div style="display:contents" dir="auto"><p id="142f2868-48c9-807e-8f87-cf9dab345209" class="">Due to the global COVID-19 pandemic situation, the 20th, 21st, and 22nd RAISE Forum meetings were all held online in 2020, 2021, and 2022, respectively. The <strong>23rd meeting</strong> was held from 17 to 18 November 2023 in Beijing. Participants and presenters at the 23nd meeting were members from China, Japan, Korea, Malaysia, Singapore, Thailand, and ISC2.</p></div><div style="display:contents" dir="auto"><h3 id="142f2868-48c9-8034-9f49-c61387f9afc9" class="">Upcoming Meeting</h3></div><div style="display:contents" dir="auto"><p id="142f2868-48c9-800d-81b6-ea541d4d87ef" class="">The RAISE Forum 2024 meeting, which will be the 20th anniversary of the forum, will be held from 3rd to 4th December in Bangkok, Thailand. </p></div><div style="display:contents" dir="auto"><hr id="142f2868-48c9-807c-977e-fc01dc668b15"/></div><div style="display:contents" dir="auto"><p id="142f2868-48c9-80c9-9521-d7895ab3fb48" class="">
+</p></div></div></div><div style="display:contents" dir="auto"><div id="e199a2e6-ec5a-4277-baa8-97c8beed2f22" style="width:25%" class="column"><div style="display:contents" dir="ltr"><figure id="145f2868-48c9-8090-b596-c6247f8dc924" class="image"><a href="images/image001.jpg"><img style="width:158.8020782470703px" src="images/image001.jpg"/></a></figure></div><div style="display:contents" dir="auto"><hr id="145f2868-48c9-80be-9313-eedefaf1168a"/></div><div style="display:contents" dir="auto"><h3 id="145f2868-48c9-8032-9486-da231d1cb4b1" class="">Co-chairs</h3></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-8051-9a53-facd66bd352b" class="">Dr Meng-Chow Kang</p></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-80ce-a332-c39e6857985c" class="">Koji Nakao</p></div><div style="display:contents" dir="auto"><h3 id="145f2868-48c9-80b6-955d-cbe3322477de" class="">Permanent Members</h3></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-802c-8f02-cab1287ae8ed" class="">Professor Youm</p></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-80ad-b27a-fb8b5283c8cd" class="">Dr Dai Inosue</p></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-80ca-901d-ea7ba3d348e5" class="">Prinya</p></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-8050-8ace-e4ad5bd78f70" class="">Xinjie Wang</p></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-808d-8c26-d0e245411916" class="">Ida</p></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-8078-9ebf-d4e39f5846aa" class="">Sabriah</p></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-8096-818d-dc3413d21657" class="">Otto Lee</p></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-8064-98d9-dd2e26e643bd" class="">Clayton Jones</p></div><div style="display:contents" dir="auto"><h3 id="145f2868-48c9-801c-ab2e-c57e1349ac9d" class="">Secretariat</h3></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-80cc-9cde-c4c4b7aaada8" class="">Wenbo Pang</p></div><div style="display:contents" dir="auto"><h3 id="a58dd614-9968-4959-b778-c7696da10cb5" class="">Sponsors / Supporting Organizations</h3></div><div style="display:contents" dir="auto"><hr id="145f2868-48c9-8009-9b88-fbb70d8acc5b"/></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-807e-8006-e3d2213e3ee8" class="">The 24th meeting is sponsored by Huawei International and Powertime Beijing, and supported by ACIS Online (Thailand) and Averitus Pte Ltd.</p></div><div style="display:contents" dir="auto"><div id="147f2868-48c9-80f7-a2dc-dd76728392db" class="column-list"><div style="display:contents" dir="auto"><div id="147f2868-48c9-80bf-99e3-d84e86858ebb" style="width:81.25%" class="column"><div style="display:contents" dir="ltr"><figure id="147f2868-48c9-80ce-9a63-eb9266456032" class="image"><a href="images/8b1b223a-8e4b-44ab-9ed8-98c26506b214.png"><img style="width:1157.5px" src="images/8b1b223a-8e4b-44ab-9ed8-98c26506b214.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="147f2868-48c9-8031-8293-c2569436c950" class="image"><a href="images/image.png"><img style="width:211.73828125px" src="images/image.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="147f2868-48c9-80ba-8d11-d094bbbb06a1" class="image"><a href="images/image_1.png"><img style="width:277.20050048828125px" src="images/image_1.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="147f2868-48c9-8093-bc6e-c36c72b4fa5a" style="width:81.25%" class="column"><div style="display:contents" dir="ltr"><figure id="147f2868-48c9-804a-a1f9-f294a6cbcba0" class="image"><a href="images/Averitus-Logo1.jpg"><img style="width:151.86196899414062px" src="images/Averitus-Logo1.jpg"/></a></figure></div></div></div></div></div><div style="display:contents" dir="auto"><hr id="145f2868-48c9-80d5-9484-f1ff18ea0015"/></div><div style="display:contents" dir="auto"><p id="142f2868-48c9-8088-b311-e0b22c14f281" class="">The 23rd meeting was sponsored by Beijing VRV Software Corporation Ltd, and Beijing Powertime Ltd.</p></div><div style="display:contents" dir="auto"><div id="147f2868-48c9-8036-ad33-f7b51ca3def2" class="column-list"><div style="display:contents" dir="auto"><div id="147f2868-48c9-8054-b7aa-d4033e852bad" style="width:100%" class="column"><div style="display:contents" dir="ltr"><figure id="145f2868-48c9-8056-85ef-de2e7e59135b" class="image"><a href="images/image_2.png"><img style="width:211.7317657470703px" src="images/image_2.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="147f2868-48c9-8033-b791-eb950ea5a7e3" style="width:100%" class="column"><div style="display:contents" dir="ltr"><figure id="145f2868-48c9-805f-98af-cd7a177804d6" class="image"><a href="images/image.png"><img style="width:211.73828125px" src="images/image.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="147f2868-48c9-80ae-b052-f6eb0ea2cbc3" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><hr id="145f2868-48c9-80f4-baf0-ffa3d0794cc0"/></div><div style="display:contents" dir="auto"><p id="145f2868-48c9-80b9-bb51-cbe9634703cd" class="">Connect with RAISE Forum at X.com: <a href="https://twitter.com/raiseforum">@raiseforum.org</a></p></div></div></div></div></div><div style="display:contents" dir="auto"><p id="142f2868-48c9-808b-9f54-f7458bc6bbcd" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
